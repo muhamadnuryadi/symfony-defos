@@ -1,0 +1,18 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+<div class="container">
+	<div class="row text-center">
+        <div class="col-sm-6 col-sm-offset-3">
+        <br><br> <h2 style="color:#0fad00">Success</h2>
+        <h3>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</h3>
+        <p style="font-size:20px;color:#5C5C5C;">{{ 'registration.back'|trans }}.</p>
+        <a href="{{ path('fos_user_security_login') }}" class="btn btn-success">     Log in      </a>
+    <br><br>
+        </div>
+        
+	</div>
+</div>
+{% endblock fos_user_content %}

@@ -1,0 +1,22 @@
+{# {% extends "@FOSUser/layout.html.twig" %} #}
+{# {% use "bootstrap_base_layout.html.twig" %} #}
+{% extends "FOSUserBundle::layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{# {% include "@FOSUser/Registration/register_content.html.twig" %} #}	
+{# <div class="row">
+	<div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="account-wall">
+        	<form action="{{ path("fos_user_registration_register") }}" method="post" class="form-signin">
+        		
+        	<input type="hidden" id="fos_user_registration_form__token" name="fos_user_registration_form[_token]" value="{{ form.children._token.vars.value }}">
+        		<div class="formgroup">
+	                <input type="submit" class="btn btn-lg btn-primary btn-block" value="{{ 'registration.submit'|trans }}" />
+				</div>
+        	</form>
+    	</div>
+    </div>
+</div> #}
+{% endblock fos_user_content %}

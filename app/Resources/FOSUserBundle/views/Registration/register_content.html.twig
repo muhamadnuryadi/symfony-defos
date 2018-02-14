@@ -1,0 +1,51 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="row">
+	<div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="account-wall">
+		{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register form-signin'}}) }}
+
+	    {# {{ form_widget(form) }} #}
+
+	    {# {{ dump(form) }} #}
+	    
+	    {# <div class="formgroup">
+	    	<input class="form-control" type="text" id="email" name="_email" value="{{ form.children.email.vars.value }}" required="required" placeholder="" autofocus/>
+	    </div> #}
+	    <h2>Register</h2>
+	    <div class="formgroup" style="margin-top:20px;">
+	    	{{ form_widget(form.first_name, {'attr': {'class': 'form-control', placeholder: 'First Name' }}) }}
+	    	{{ form_errors(form.first_name) }}
+	    </div>
+	    <div class="formgroup" style="margin-top:20px;">
+	    	{{ form_widget(form.last_name, {'attr': {'class': 'form-control', placeholder: 'Last Name' }}) }}
+	    	{{ form_errors(form.last_name) }}
+	    </div>
+	    
+	    <div class="formgroup" style="margin-top:20px;">
+	    	{{ form_widget(form.email, {'attr': {'class': 'form-control', placeholder: 'form.email' }}) }}
+	    	{{ form_errors(form.email) }}
+	    </div>
+	    
+	    <div class="formgroup" style="margin-top:20px;">
+	    	{{ form_widget(form.username, {'attr': {'class': 'form-control', placeholder: 'form.username' }}) }}
+	    	{{ form_errors(form.username) }}
+	    </div>
+	    
+	    <div class="formgroup" style="margin-top:20px;">
+	    	{{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control', placeholder: 'Password' }}) }}
+	    	{{ form_errors(form.plainPassword.first) }}
+	    </div>
+	    
+	    <div class="formgroup" style="margin-top:20px;">
+	    	{{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control', placeholder: 'Retype Password' }}) }}
+	    </div>
+
+	    <div class="formgroup" style="margin-top:20px;">
+            <input class="btn btn-lg btn-primary btn-block" type="submit" id="_submit" name="_submit" value="{{ 'registration.submit'|trans }}" />
+		</div>
+		{{ form_end(form) }}
+		</div>
+		<a href="{{ path('fos_user_security_login') }}" class="text-center new-account">Login Here.</a>
+	</div>
+</div>
