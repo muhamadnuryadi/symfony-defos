@@ -74,11 +74,12 @@ fos_user:
      firewall_name: main
      user_class: AppBundle\Entity\User
      registration:
+        from_email:
+             address: "yourapp@app.com"
+             sender_name: "demo"
 #        form:
 #            type: AppBundle\Form\RegistrationType
 #        confirmation:
 #            enabled:    false 
 #            template:   FOSUserBundle:Registration:email.txt.twig
-         from_email:
-             address: "yourapp@app.com"
-             sender_name: "demo"
+         
