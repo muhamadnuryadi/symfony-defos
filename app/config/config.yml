@@ -77,7 +77,7 @@ fos_user:
         form:
             type: AppBundle\Form\RegistrationType
         confirmation:
-            enabled:    true 
+            enabled:    false 
             template:   FOSUserBundle:Registration:email.txt.twig
         from_email:
             address: "%mailer_user%"
