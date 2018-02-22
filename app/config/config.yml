@@ -75,8 +75,8 @@ fos_user:
      user_class: AppBundle\Entity\User
      registration:
         from_email:
-             address: "yourapp@app.com"
-             sender_name: "demo"
+             #address: "yourapp@app.com"
+             #sender_name: "demo"
 #        form:
 #            type: AppBundle\Form\RegistrationType
 #        confirmation:
